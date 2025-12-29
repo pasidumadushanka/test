@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Pasindu Madushanka | Software Engineer & Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Pasindu Madushanka - Software Engineer specializing in Full Stack, Mobile App Development (Flutter/Android), and Cyber Security based in Sri Lanka.">
+    <meta name="keywords" content="Pasindu Madushanka, Software Engineer Sri Lanka, Web Developer, Mobile App Developer, Flutter, React, Portfolio">
+    <meta name="author" content="Pasindu Madushanka">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL (Corrected) -->
+    <link rel="canonical" href="https://pasidumadushanka.github.io/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="photo/pasindu.jpeg">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pasidumadushanka.github.io/">
+    <meta property="og:title" content="Pasindu Madushanka | Software Engineer">
+    <meta property="og:description" content="Explore the portfolio of Pasindu Madushanka, featuring innovative software solutions and projects.">
+    <meta property="og:image" content="https://pasidumadushanka.github.io/photo/pasiya.jpeg">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Schema Markup (Corrected URL) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pasindu Madushanka",
+      "url": "https://pasidumadushanka.github.io/",
+      "image": "https://pasidumadushanka.github.io/photo/pasiya.jpeg",
+      "jobTitle": "Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance / Open to Work"
+      },
+      "alumniOf": "Cardiff Metropolitan University",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kandy",
+        "addressCountry": "Sri Lanka"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/pasindu-madushanka-8b10b536b/",
+        "https://github.com/pasidumadushanka",
+        "https://wa.me/94789701351"
+      ],
+      "knowsAbout": ["Software Engineering", "Full Stack Development", "Mobile App Development", "Cyber Security", "React", "Flutter", "Java"]
+    }
+    </script>
+</head>
+<body>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">Pasindu<span>.Dev</span></div>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#portfolio"><i class="fas fa-laptop-code"></i> Portfolio</a></li>
+                <li><a href="#services"><i class="fas fa-briefcase"></i> Services</a></li>
+                <li><a href="#contact"><i class="fas fa-paper-plane"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-text" data-aos="fade-right">
+                    <div class="badge">Welcome to my Portfolio</div>
+                    <h1>Hi, I'm <span class="gradient-text">Pasindu</span></h1>
+                    
+                    <div class="typed-wrapper">
+                        <h2>I am <span id="typed-text"></span></h2>
+                    </div>
+
+                    <p>
+                        Final year Software Engineering student at Cardiff Metropolitan University. 
+                        I build futuristic, high-performance digital experiences combining creativity with technology.
+                    </p>
+                    <div class="btn-group">
+                        <a href="#contact" class="btn btn-primary">Hire Me</a>
+                        <a href="photo/pasidu_cv.pdf" class="btn btn-outline" download>Download CV <i class="fas fa-download"></i></a>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="https://github.com/pasidumadushanka" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/pasindu-madushanka-8b10b536b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:pasindumadu378@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="hero-img" data-aos="fade-left" data-tilt>
+                    <div class="img-border">
+                        <img src="photo/pasindu.jpeg" alt="Pasindu Madushanka">
+                    </div>
+                    <div class="floating-stat stat-1">
+                        <i class="fas fa-code"></i>
+                        <span>20+ Projects</span>
+                    </div>
+                    <div class="floating-stat stat-2">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>3+ Years Exp</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>About <span>Me</span></h2>
+                    <p>My journey through education and technology.</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-left" data-aos="fade-right">
+                        <img src="photo/pasiya.jpeg" alt="About Profile" class="about-main-img" data-tilt>
+                    </div>
+                    
+                    <div class="about-right" data-aos="fade-left">
+                        <h3>Software Developer & BSc Student</h3>
+                        <p>
+                            I am a passionate software developer and a final-year BSc student with a strong foundation in modern web technologies. 
+                            I love crafting dynamic websites and applications. Beyond coding, I have a keen eye for photography.
+                        </p>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="date">Present</span>
+                                <h4>BSc (Hons) Software Engineering</h4>
+                                <p>Cardiff Metropolitan University (ICBT Campus)</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">2025</span>
+                                <h4>Diploma in Cyber Security</h4>
+                                <p>SITC Campus</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">Completed</span>
+                                <h4>Full Stack Developer Course</h4>
+                                <p>University of Moratuwa</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">Past</span>
+                                <h4>G.C.E. Advanced Level (A/L)</h4>
+                                <p>Physical / Technology Stream</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">Past</span>
+                                <h4>G.C.E. Ordinary Level (O/L)</h4>
+                                <p>Walkumbura Soragune College</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>My <span>Portfolio</span></h2>
+                    <p>Recent projects and technical skills.</p>
+                </div>
+
+                <div class="tabs">
+                    <button class="tab-btn active" data-target="projects">Projects</button>
+                    <button class="tab-btn" data-target="skills">Tech Stack</button>
+                    <button class="tab-btn" data-target="certificates">Certificates</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="tab-content active" id="projects">
+                    <div class="project-grid">
+                        
+                        <!-- Project 1 -->
+                        <div class="project-card glass" data-aos="fade-up">
+                            <div class="media-container">
+                                <div class="overlay"></div>
+                                <video autoplay muted loop playsinline poster="assets/placeholder.jpg">
+                                    <source src="https://res.cloudinary.com/ddykxl9pe/video/upload/v1762666435/app_gipylb.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <h3>LuxeVista Hotel App</h3>
+                                    <p>Full-featured hotel management mobile application with Firebase backend integration.</p>
+                                </div>
+                                <div class="tech-stack">
+                                    <i class="devicon-android-plain colored" title="Android"></i>
+                                    <i class="devicon-java-plain colored" title="Java"></i>
+                                    <i class="devicon-firebase-plain colored" title="Firebase"></i>
+                                </div>
+                                <div class="links">
+                                    <button class="link-btn details" onclick="openModal(1)">
+                                        <i class="fas fa-info-circle"></i> View Details
+                                    </button>
+                                    <a href="https://github.com/pasidumadushanka/luxevista-app.git" class="link-btn code"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-card glass" data-aos="fade-up" data-aos-delay="100">
+                            <div class="media-container">
+                                <div class="overlay"></div>
+                                <video autoplay muted loop playsinline>
+                                    <source src="https://res.cloudinary.com/ddykxl9pe/video/upload/v1762666506/Recording1_xefeeh.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <h3>Wellness Center</h3>
+                                    <p>Platform connecting admin, therapists, and consumers efficiently.</p>
+                                </div>
+                                <div class="tech-stack">
+                                    <i class="devicon-php-plain colored" title="PHP"></i>
+                                    <i class="devicon-mysql-plain colored" title="MySQL"></i>
+                                    <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                </div>
+                                <div class="links">
+                                    <button class="link-btn details" onclick="openModal(2)">
+                                        <i class="fas fa-info-circle"></i> View Details
+                                    </button>
+                                    <a href="#" class="link-btn code"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-card glass" data-aos="fade-up" data-aos-delay="200">
+                            <div class="media-container">
+                                <div class="overlay"></div>
+                                <video autoplay muted loop playsinline>
+                                    <source src="https://res.cloudinary.com/ddykxl9pe/video/upload/v1763397715/soc_vzklh6.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <h3>GadgetHub (SOC)</h3>
+                                    <p>Security Operations Center project for monitoring events.</p>
+                                </div>
+                                <div class="tech-stack">
+                                    <i class="devicon-csharp-plain colored" title="C#"></i>
+                                    <i class="devicon-dotnetcore-plain colored" title=".NET Core"></i>
+                                    <i class="devicon-azuresqldatabase-plain colored" title="SQL"></i>
+                                </div>
+                                <div class="links">
+                                    <button class="link-btn details" onclick="openModal(3)">
+                                        <i class="fas fa-info-circle"></i> View Details
+                                    </button>
+                                    <a href="#" class="link-btn code"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="project-card glass" data-aos="fade-up" data-aos-delay="300">
+                            <div class="media-container">
+                                <div class="overlay"></div>
+                                <video autoplay muted loop playsinline>
+                                    <source src="https://res.cloudinary.com/ddykxl9pe/video/upload/v1763398848/Video_Project_1_jupew2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <h3>Gym Perfect</h3>
+                                    <p>Gym management system with member payments.</p>
+                                </div>
+                                <div class="tech-stack">
+                                    <i class="devicon-php-plain colored" title="PHP"></i>
+                                    <i class="devicon-bootstrap-plain colored" title="Bootstrap"></i>
+                                    <i class="devicon-mysql-plain colored" title="MySQL"></i>
+                                </div>
+                                <div class="links">
+                                    <button class="link-btn details" onclick="openModal(4)">
+                                        <i class="fas fa-info-circle"></i> View Details
+                                    </button>
+                                    <a href="https://github.com/pasidumadushanka/gym-management-system.git" class="link-btn code"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5 -->
+                        <div class="project-card glass" data-aos="fade-up" data-aos-delay="400">
+                            <div class="media-container">
+                                <div class="overlay"></div>
+                                <video autoplay muted loop playsinline>
+                                    <source src="https://res.cloudinary.com/ddykxl9pe/video/upload/v1764082617/Video_Project_5_m1rtvy.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <h3>Medicare Plus</h3>
+                                    <p>Hospital management system for appointments.</p>
+                                </div>
+                                <div class="tech-stack">
+                                    <i class="devicon-php-plain colored" title="PHP"></i>
+                                    <i class="devicon-mysql-plain colored" title="MySQL"></i>
+                                    <i class="devicon-css3-plain colored" title="CSS3"></i>
+                                </div>
+                                <div class="links">
+                                    <button class="link-btn details" onclick="openModal(5)">
+                                        <i class="fas fa-info-circle"></i> View Details
+                                    </button>
+                                    <a href="https://github.com/pasind637/medicare.git" class="link-btn code"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6 -->
+                        <div class="project-card glass" data-aos="fade-up" data-aos-delay="500">
+                            <div class="media-container">
+                                <div class="overlay"></div>
+                                <video autoplay muted loop playsinline>
+                                    <source src="https://res.cloudinary.com/ddykxl9pe/video/upload/v1765130438/Video_Project_6_crxjkp.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <h3>PaddySmart AI</h3>
+                                    <p>AI-driven yield prediction & crop management.</p>
+                                </div>
+                                <div class="tech-stack">
+                                    <i class="devicon-react-original colored" title="React"></i>
+                                    <i class="devicon-laravel-plain colored" title="Laravel"></i>
+                                    <i class="devicon-python-plain colored" title="Python"></i>
+                                </div>
+                                <div class="links">
+                                    <button class="link-btn details" onclick="openModal(6)">
+                                        <i class="fas fa-info-circle"></i> View Details
+                                    </button>
+                                    <a href="https://github.com/pasidumadushanka/paddy-field-system.git" class="link-btn code"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="tab-content" id="skills">
+                    <div class="skills-wrapper">
+                        <i class="devicon-react-original colored" title="React"></i>
+                        <i class="devicon-javascript-plain colored" title="JS"></i>
+                        <i class="devicon-nodejs-plain colored" title="Node"></i>
+                        <i class="devicon-html5-plain colored" title="HTML5"></i>
+                        <i class="devicon-css3-plain colored" title="CSS3"></i>
+                        <i class="devicon-mongodb-plain colored" title="MongoDB"></i>
+                        <i class="devicon-java-plain colored" title="Java"></i>
+                        <i class="devicon-php-plain colored" title="PHP"></i>
+                        <i class="devicon-csharp-plain colored" title="C#"></i>
+                        <i class="devicon-mysql-plain colored" title="MySQL"></i>
+                        <i class="devicon-firebase-plain colored" title="Firebase"></i>
+                        <i class="devicon-flutter-plain colored" title="Flutter"></i>
+                        <i class="devicon-androidstudio-plain colored" title="Android"></i>
+                    </div>
+                </div>
+
+                <!-- Certificates -->
+                 <div class="tab-content" id="certificates">
+                    <div class="cert-grid">
+                        <div class="cert-card" data-aos="fade-up">
+                            <img src="https://res.cloudinary.com/ddykxl9pe/image/upload/v1763402035/Screenshot_2025-08-16_122146_fqq2px.png" alt="Cert 1">
+                        </div>
+                        <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                            <img src="https://res.cloudinary.com/ddykxl9pe/image/upload/v1763402036/Screenshot_2025-08-16_130325_sslwds.png" alt="Cert 2">
+                        </div>
+                        <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                            <img src="https://res.cloudinary.com/ddykxl9pe/image/upload/v1763401697/sql_z7mlml.png" alt="Cert 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>My <span>Services</span></h2>
+                    <p>What I can do for you.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card glass" data-aos="flip-left">
+                        <div class="icon-box"><i class="fas fa-code"></i></div>
+                        <h3>Web Development</h3>
+                        <p>High-performance web applications using HTML, CSS, React and JS.</p>
+                    </div>
+                    <div class="service-card glass" data-aos="flip-left" data-aos-delay="100">
+                        <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Mobile Apps</h3>
+                        <p>Android and Flutter apps with smooth UI and backend integration.</p>
+                    </div>
+                    <div class="service-card glass" data-aos="flip-left" data-aos-delay="200">
+                        <div class="icon-box"><i class="fas fa-database"></i></div>
+                        <h3>Database Design</h3>
+                        <p>Secure database architecture for scalable applications.</p>
+                    </div>
+                    <div class="service-card glass" data-aos="flip-left" data-aos-delay="300">
+                        <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>Modern interfaces focusing on user experience and aesthetics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Client <span>Feedback</span></h2>
+                </div>
+                <div class="swiper testimonial-slider" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review-card glass">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p>"Pasindu is a highly skilled developer who delivered exceptional results. Highly recommended!"</p>
+                                <div class="user">
+                                    <img src="https://i.pravatar.cc/100?img=1" alt="User">
+                                    <div>
+                                        <h4>Ms.Rushini kaushalya</h4>
+                                        <small>lecture at ICBT</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-card glass">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p>"Great communicator and talented developer. The final product exceeded our expectations."</p>
+                                <div class="user">
+                                    <img src="https://i.pravatar.cc/100?img=5" alt="User">
+                                    <div>
+                                        <h4>Jane Smith</h4>
+                                        <small>Manager</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-card glass">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p>"His problem-solving skills are top-notch. Built a beautiful website for us."</p>
+                                <div class="user">
+                                    <img src="https://i.pravatar.cc/100?img=8" alt="User">
+                                    <div>
+                                        <h4>Samuel Lee</h4>
+                                        <small>Founder</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Get in <span>Touch</span></h2>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-socials" data-aos="fade-right">
+                        <h3>Let's Connect</h3>
+                        <p>Click on an icon below to contact me directly.</p>
+                        
+                        <a href="https://wa.me/94789701351" target="_blank" class="social-btn whatsapp">
+                            <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="text">
+                                <span>Chat on</span>
+                                <h4>WhatsApp</h4>
+                            </div>
+                        </a>
+
+                        <a href="mailto:pasindumadu378@gmail.com" class="social-btn gmail">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <div class="text">
+                                <span>Send an</span>
+                                <h4>Email</h4>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/pasidumadushanka" target="_blank" class="social-btn github">
+                            <div class="icon"><i class="fab fa-github"></i></div>
+                            <div class="text">
+                                <span>View on</span>
+                                <h4>GitHub</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-form glass" data-aos="fade-left">
+                        <h3>Send a Message</h3>
+                        <form id="my-form" action="https://formspree.io/f/myzpvqqp" method="POST">
+                            <div class="input-box">
+                                <input type="text" name="name" required>
+                                <label>Your Name</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="email" name="email" required>
+                                <label>Your Email</label>
+                            </div>
+                            <div class="input-box">
+                                <textarea name="message" required></textarea>
+                                <label>Your Message</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                            <p id="form-status"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">Pasindu<span>.Dev</span></div>
+            <p>Building the future, one line of code at a time.</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Pasindu Madushanka. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast-box"></div>
+
+    <!-- PROJECT DETAILS MODAL -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-modal">&times;</span>
+            
+            <!-- Video Header -->
+            <div class="modal-header">
+                <video id="modal-video" autoplay muted loop playsinline>
+                    <source src="" type="video/mp4">
+                </video>
+                <div class="header-overlay"></div>
+            </div>
+
+            <div class="modal-body">
+                <h2 id="modal-title">Project Title</h2>
+                <div class="divider"></div>
+                
+                <!-- Full Description -->
+                <div class="modal-description">
+                    <p id="modal-desc">
+                        <!-- JS will inject the long description here -->
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <!-- Only Live Demo Button -->
+                    <a href="#" class="link-btn live large-btn" id="modal-live">
+                        <i class="fas fa-globe"></i> View Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COMING SOON MODAL -->
+    <div id="coming-soon-modal" class="modal">
+        <div class="modal-content glass coming-soon-content">
+            <span class="close-coming-soon">&times;</span>
+            
+            <div class="coming-soon-body">
+                <div class="icon-glow">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2>Project is Launching Soon!</h2>
+                <p>I'm currently putting the final touches on this project deployment. It will be live very shortly.</p>
+                
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                
+                <button class="btn btn-outline" onclick="closeComingSoon()">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
