@@ -9,30 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 
-    // 2. Initialize AOS
+    // 2. Initialize AOS (Animations)
     if(typeof AOS !== 'undefined') {
         AOS.init({ duration: 1000, offset: 100, once: true });
     }
 
-    // 3. Typed.js
+    // 3. Typed.js (Auto Typing Effect - FIX 2 APPLIED)
     if(document.getElementById('typed-text') && typeof Typed !== 'undefined') {
+        // Initialize Typed
         new Typed('#typed-text', {
             strings: ['Software Engineer', 'Full Stack Developer', 'Mobile App Developer', 'UX/UI Designer'],
             typeSpeed: 50,
             backSpeed: 30,
+            backDelay: 1500,
             loop: true
         });
-    }
-
-    // --- MOBILE VIBRATION FIX ---
-    if (window.innerWidth < 768) {
-        const typedContainer = document.querySelector('.hero-text h2');
-        if (typedContainer) {
-            typedContainer.style.minHeight = '80px'; 
-            typedContainer.style.display = 'flex';
-            typedContainer.style.alignItems = 'center';
-            typedContainer.style.justifyContent = 'center';
-        }
     }
 
     // 4. Hamburger Menu Logic
@@ -45,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.classList.toggle('toggle');
         });
 
+        // Close menu when a link is clicked
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -52,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!hamburger.contains(e.target) && !navLinks.contains(e.target) && !e.target.closest('.nav-controls')) {
                 navLinks.classList.remove('active');
@@ -66,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
 
     if(themeBtn) {
+        // Load saved theme
         if(localStorage.getItem('theme') === 'light'){
             body.classList.add('light-theme');
             if(icon) icon.classList.replace('fa-moon', 'fa-sun');
@@ -183,16 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener("mousemove", (e) => {
             const posX = e.clientX;
             const posY = e.clientY;
-
-            // Dot moves instantly
-            cursorDot.style.left = `${posX}px`;
-            cursorDot.style.top = `${posY}px`;
-
-            // Outline moves with delay
-            cursorOutline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`
-            }, { duration: 500, fill: "forwards" });
+            cursorDot.style.left = `${posX}px`; cursorDot.style.top = `${posY}px`;
+            cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 500, fill: "forwards" });
         });
 
         const interactiveElements = document.querySelectorAll('a, button, .project-card, .social-btn');
@@ -206,86 +192,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* =========================================
-   COMING SOON MODAL LOGIC
-   ========================================= */
-const comingSoonModal = document.getElementById("coming-soon-modal");
-const closeComingSoonBtn = document.querySelector(".close-coming-soon");
-
-function openComingSoon() {
-    if(comingSoonModal) {
-        comingSoonModal.style.display = "flex";
-        setTimeout(() => {
-            comingSoonModal.classList.add("show");
-        }, 10);
-    }
-}
-
-function closeComingSoon() {
-    if(comingSoonModal) {
-        comingSoonModal.classList.remove("show");
-        setTimeout(() => {
-            comingSoonModal.style.display = "none";
-        }, 300);
-    }
-}
-
-if(closeComingSoonBtn) {
-    closeComingSoonBtn.addEventListener("click", closeComingSoon);
-}
-
-window.addEventListener("click", (e) => {
-    if (e.target == comingSoonModal) {
-        closeComingSoon();
-    }
-});
-
-
-/* =========================================
-   PROJECT DETAILS MODAL LOGIC
+   PROJECT DETAILS MODAL LOGIC (OUTSIDE)
    ========================================= */
 
 const projectData = {
     1: {
         title: "LuxeVista Hotel App",
         video: "https://res.cloudinary.com/ddykxl9pe/video/upload/v1762666435/app_gipylb.mp4",
-        description: "LuxeVista is a state-of-the-art mobile application designed to revolutionize the hospitality industry. Built using Android Studio and Java with a robust Firebase backend, it offers a seamless booking experience for users while providing hotel administrators with real-time management tools. The app features secure user authentication, real-time room availability tracking, and an integrated payment gateway. Its intuitive UI/UX design ensures that guests can effortlessly navigate through services, making their stay more enjoyable and efficient.",
-        liveLink: "#" // No Link -> Coming Soon
+        description: "LuxeVista is a state-of-the-art mobile application designed to revolutionize the hospitality industry. Built using Android Studio and Java with a robust Firebase backend, it offers a seamless booking experience for users while providing hotel administrators with real-time management tools. The app features secure user authentication, real-time room availability tracking, and an integrated payment gateway.",
+        liveLink: "#"
     },
     2: {
         title: "Wellness Center",
         video: "https://res.cloudinary.com/ddykxl9pe/video/upload/v1765785601/wellness_app_ohgmj5.mp4",
-        description: "The Wellness Center platform acts as a digital bridge between healthcare providers, therapists, and patients. Developed using PHP and MySQL, this responsive web application streamlines the appointment scheduling process. It eliminates manual booking errors by offering a dynamic calendar system where patients can view therapist availability in real-time. Key features include an admin dashboard for staff management, automated email notifications for appointments, and a secure patient record system, ensuring privacy and efficiency in healthcare delivery.",
-        liveLink: "https://greenlife-wigs.vercel.app/" // Has Link
+        description: "The Wellness Center platform acts as a digital bridge between healthcare providers, therapists, and patients. Developed using PHP and MySQL, this responsive web application streamlines the appointment scheduling process. It eliminates manual booking errors by offering a dynamic calendar system where patients can view therapist availability in real-time.",
+        liveLink: "https://greenlife-wigs.vercel.app/"
     },
     3: {
         title: "GadgetHub (SOC)",
         video: "https://res.cloudinary.com/ddykxl9pe/video/upload/v1763397715/soc_vzklh6.mp4",
-        description: "GadgetHub is a specialized Security Operations Center (SOC) dashboard developed using C# and .NET Core. This system allows distributors and security analysts to monitor network threats and compare product quotations simultaneously. It features a high-performance data processing engine capable of handling large volumes of logs. The system automatically selects the best-priced options from multiple distributors and alerts admins about potential security breaches, making it a dual-purpose tool for operational efficiency and cybersecurity monitoring.",
+        description: "GadgetHub is a specialized Security Operations Center (SOC) dashboard developed using C# and .NET Core. This system allows distributors and security analysts to monitor network threats and compare product quotations simultaneously. It features a high-performance data processing engine capable of handling large volumes of logs.",
         liveLink: "#"
     },
     4: {
         title: "Gym Perfect",
         video: "https://res.cloudinary.com/ddykxl9pe/video/upload/v1763398848/Video_Project_1_jupew2.mp4",
-        description: "Gym Perfect is a comprehensive gym management solution designed to digitize fitness center operations. Built with PHP and Bootstrap, it handles member registrations, subscription tracking, and payment processing. The system includes automated alerts for expiring memberships, helping gym owners retain clients. It also features a progress tracking module where trainers can log member workouts and diet plans, fostering a more engaging fitness environment.",
+        description: "Gym Perfect is a comprehensive gym management solution designed to digitize fitness center operations. Built with PHP and Bootstrap, it handles member registrations, subscription tracking, and payment processing. The system includes automated alerts for expiring memberships, helping gym owners retain clients.",
         liveLink: "#"
     },
     5: {
         title: "Medicare Plus",
         video: "https://res.cloudinary.com/ddykxl9pe/video/upload/v1764082617/Video_Project_5_m1rtvy.mp4",
-        description: "Medicare Plus is a hospital management system aimed at reducing patient wait times and optimizing doctor schedules. This full-stack web application allows patients to book appointments online, view doctor profiles, and access their medical history securely. For hospital staff, it provides a centralized dashboard to manage ward availability, doctor shifts, and patient admissions. The system prioritizes data security and user accessibility, ensuring a smooth healthcare experience for all stakeholders.",
+        description: "Medicare Plus is a hospital management system aimed at reducing patient wait times and optimizing doctor schedules. This full-stack web application allows patients to book appointments online, view doctor profiles, and access their medical history securely.",
         liveLink: "#"
     },
     6: {
         title: "PaddySmart AI",
         video: "https://res.cloudinary.com/ddykxl9pe/video/upload/v1765130438/Video_Project_6_crxjkp.mp4",
-        description: "PaddySmart AI is a cutting-edge agricultural platform that leverages Artificial Intelligence to empower farmers. By integrating Python-based Machine Learning models with a React frontend, the system analyzes soil data and weather patterns to predict crop yields accurately. It provides farmers with actionable insights on irrigation schedules and fertilizer usage. This project aims to promote sustainable farming practices and maximize harvest efficiency through data-driven decision-making.",
+        description: "PaddySmart AI is a cutting-edge agricultural platform that leverages Artificial Intelligence to empower farmers. By integrating Python-based Machine Learning models with a React frontend, the system analyzes soil data and weather patterns to predict crop yields accurately.",
         liveLink: "#"
     }
 };
 
-// DOM Elements
+// Global Modal Variables
 const modal = document.getElementById("project-modal");
+const comingSoonModal = document.getElementById("coming-soon-modal");
 const closeModal = document.querySelector(".close-modal");
+const closeComing = document.querySelector(".close-coming-soon");
 const mTitle = document.getElementById("modal-title");
 const mDesc = document.getElementById("modal-desc");
 const mVideo = document.getElementById("modal-video");
@@ -299,17 +252,17 @@ function openModal(id) {
     if(data && modal) {
         mTitle.innerText = data.title;
         mDesc.innerText = data.description;
-        
-        // --- LINK CHECKING LOGIC ---
         mLive.href = data.liveLink;
+        
         mLive.onclick = function(e) {
             if(data.liveLink === "#" || data.liveLink === "") {
                 e.preventDefault();
-                openComingSoon(); // Show "Coming Soon" Modal
+                modal.classList.remove("show");
+                setTimeout(() => { modal.style.display = "none"; if(mVideo) mVideo.pause(); }, 300);
+                setTimeout(() => { comingSoonModal.style.display = "flex"; setTimeout(() => comingSoonModal.classList.add("show"), 10); }, 350);
             }
         };
-        // ---------------------------
-        
+
         if(mVideo && mSource) {
             mSource.src = data.video;
             mVideo.load();
@@ -317,7 +270,7 @@ function openModal(id) {
             modal.style.display = "flex";
             setTimeout(() => {
                 modal.classList.add("show");
-                mVideo.play().catch(e => console.log("Autoplay prevented"));
+                mVideo.play().catch(()=>{});
             }, 10);
         }
         document.body.style.overflow = "hidden";
@@ -338,13 +291,17 @@ function closeProjectModal() {
     }
 }
 
-// Attach Listeners
-if(closeModal) {
-    closeModal.addEventListener("click", closeProjectModal);
+function closeComingSoon() {
+    if(comingSoonModal) {
+        comingSoonModal.classList.remove("show");
+        setTimeout(() => { comingSoonModal.style.display = "none"; document.body.style.overflow = "auto"; }, 300);
+    }
 }
 
+if(closeModal) closeModal.addEventListener("click", closeProjectModal);
+if(closeComing) closeComing.addEventListener("click", closeComingSoon);
+
 window.addEventListener("click", (e) => {
-    if (e.target == modal) {
-        closeProjectModal();
-    }
+    if (e.target == modal) closeProjectModal();
+    if (e.target == comingSoonModal) closeComingSoon();
 });
