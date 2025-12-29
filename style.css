@@ -301,10 +301,17 @@ header {
     border: 5px solid var(--primary-color); 
     box-shadow: 0 0 50px rgba(138, 43, 226, 0.4);
     animation: float 6s ease-in-out infinite;
+    /* මෙතනින් object-position අයින් කරන්න */
 }
 
-.img-border img { width: 100%; height: 100%; object-fit: cover; }
-
+.img-border img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    
+    /* --- මූණ පෙන්නන්න මේ කෝඩ් එක මෙතනට දාන්න --- */
+    object-position: top center; 
+}
 @keyframes float { 
     0%, 100% { transform: translateY(0); } 
     50% { transform: translateY(-20px); } 
